@@ -7,6 +7,7 @@ const Country = ({country, handleVisited}) => {
     const handleClick=()=>{
         setvisited(!visited)
     }
+
     return (
         <div className={`country ${visited && 'visited'}`}>
             <h3>Country: {name?.common}</h3>
@@ -18,7 +19,7 @@ const Country = ({country, handleVisited}) => {
                {visited ? ' I have visited this country.' : 'I want to visit.'}
                <br />
                <br />
-               <button>Mark as visited</button>
+               <button onClick={()=>handleVisited(country)}>Mark as visited</button>
 
         </div>
     );
